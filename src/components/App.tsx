@@ -1,14 +1,14 @@
-import * as React from "react";
-import "./../assets/scss/App.scss";
+import "./App.scss";
 
-import reactLogo from "./../assets/img/react_logo.svg";
+import { ContextProvider } from "../context/AppContext";
+import { Articles } from "./Articles/Articles";
 
-const App = () => (
-  <div className="app">
-    <h1>Hello World!</h1>
-    <p>Foo to the barz</p>
-    <img src={reactLogo} height="480" />
-  </div>
-);
+const App = () => {
+  return (
+    <ContextProvider>
+      <Articles />
+    </ContextProvider>
+  );
+};
 
 export default App;
